@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: 'holiday_checker#index'
+  resource :holiday_checker, only: [:index, :update], controller: :holiday_checker do
+    get :success
+    get :failure
+  end
 end
