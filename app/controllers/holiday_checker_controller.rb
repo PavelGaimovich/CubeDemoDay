@@ -1,6 +1,6 @@
 class HolidayCheckerController < ApplicationController
   def update
-    date = DateTime.strptime(params[:picked_date][:date], '%m/%d/%Y')
+    date = DateTime.strptime(params[:picked_date][:date], '%d-%m-%Y')
 
     if IsDateHolidayCheckService.new(date).exec
       redirect_to success_holiday_checker_path

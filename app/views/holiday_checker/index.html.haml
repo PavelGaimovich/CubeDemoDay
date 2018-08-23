@@ -3,5 +3,5 @@
     Pick day
   .panel-body
     = simple_form_for :picked_date, url: holiday_checker_path, method: :put do |f|
-      = f.input :date, input_html: { data: { provide: 'datepicker' } }
+      = f.input :date, input_html: { class: 'datepicker' }
       = f.button :submit, 'Submit'
